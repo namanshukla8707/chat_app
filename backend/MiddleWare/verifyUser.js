@@ -1,6 +1,10 @@
 const jwt = require("jsonwebtoken");
 const connectToMysql = require("../database");
 const verifyUser = (req, res, next) => {
+  //front-end
+  // const { token } = req.body;
+
+  //back-end
   const { token } = req.cookies;
   if (!token) {
     return res.status(401).json({ error: "Please login first" });

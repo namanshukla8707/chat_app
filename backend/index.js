@@ -4,6 +4,9 @@ const connectToMysql = require("./database.js");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
+const User = require("./Models/UserModel.js");
+const Room = require("./Models/RoomModel.js");
+const Message = require("./Models/MessagesModel.js");
 
 // dotenv is a package that allows us to use environment variables
 require("dotenv").config();
@@ -16,9 +19,9 @@ app.use(bodyParser.json());
 // cookie-parser is a package that allows us to use req.cookies
 app.use(cookieParser());
 
-
 // endpoints
 app.use("/api/user", require("./Routes/UserRoutes.js"));
+app.use("/api/room", require("./Routes/RoomRoutes.js"));
 
 // creating a server and listening to it
 app.listen(process.env.PORT_NO, () => {
