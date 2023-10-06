@@ -1,7 +1,7 @@
 const { Sequelize, DataTypes } = require("sequelize");
 
 // sequelize is used to create entry in mysql table format
-const sequelize = new Sequelize("chat_app", "root", "31August2001", {
+const sequelize = new Sequelize("chat_app", "root", "Sharma@1972", {
   host: "localhost",
   dialect: "mysql",
 });

@@ -4,7 +4,7 @@ const connectToMysql = require("./database.js");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
-
+const User=require('./Models/UserModel.js')
 // dotenv is a package that allows us to use environment variables
 require("dotenv").config();
 
