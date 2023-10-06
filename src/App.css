@@ -27,6 +27,25 @@
 .App-link {
   color: #61dafb;
 }
+.small-image {
+  margin-right: 10px;
+ 
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;  
+}
+body {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+.Container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(195, 181, 181, 0.886);
+}
 
 @keyframes App-logo-spin {
   from {
