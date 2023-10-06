@@ -2,11 +2,8 @@ const { Sequelize, DataTypes } = require("sequelize");
 const User = require("./UserModel.js");
 const Message = require("./MessagesModel.js");
 // sequelize is used to create entry in mysql table format
-<<<<<<< HEAD
-const sequelize = new Sequelize("chat_app", "root", "Sharma@1972", {
-=======
+
 const sequelize = new Sequelize("chat_app", "root", "Naman123", {
->>>>>>> master
   host: "localhost",
   dialect: "mysql",
 });
