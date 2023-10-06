@@ -1,7 +1,12 @@
 const { Sequelize, DataTypes } = require("sequelize");
-
+const User = require("./UserModel.js");
+const Message = require("./MessagesModel.js");
 // sequelize is used to create entry in mysql table format
+<<<<<<< HEAD
 const sequelize = new Sequelize("chat_app", "root", "Sharma@1972", {
+=======
+const sequelize = new Sequelize("chat_app", "root", "Naman123", {
+>>>>>>> master
   host: "localhost",
   dialect: "mysql",
 });
@@ -18,24 +23,16 @@ const Room = sequelize.define("Room", {
     unique: true,
   },
   roomName: { type: DataTypes.STRING, allowNull: false },
-  users: [
-    {
-      userId: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        references: { model: "User", key: "id" },
-      },
-    },
-  ],
-  messages: [
-    {
-      messageId: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        references: { model: "Message", key: "id" },
-      },
-    },
-  ],
+  userIds: {
+    type: DataTypes.JSON,
+    allowNull: false,
+    defaultValue: [],
+  },
+  messageIds: {
+    type: DataTypes.JSON,
+    allowNull: false,
+    defaultValue: [],
+  },
   createdAt: {
     type: DataTypes.DATE,
     allowNull: false,
